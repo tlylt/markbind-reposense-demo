@@ -1,0 +1,34 @@
+name: CI
+
+on: 
+  push:
+    branches:
+      - main
+  schedule:
+    - cron:  '0 0 * * *'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
+      with:
+        python-version: "3.8"
+    - name: Install dependencies
+      run: pip install requests
+      shell: bash
+    - name: Install Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+    - name: Generate RepoSense
+      run: bash ./run.sh
+      shell: bash
+    - name: Build & Deploy MarkBind site
+      uses: MarkBind/markbind-action@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        version: '3.1.1'
