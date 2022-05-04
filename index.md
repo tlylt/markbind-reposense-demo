@@ -1,11 +1,14 @@
 <frontmatter>
   layout: default.md
-  pageNav: 2
-  pageNavTitle: "Chapters of This Page"
+  pageNav: 3
 </frontmatter>
 
 <br>
 
 # Reposense report
 
-[Here](reposense-report/index.html)
+[Here](reposense-report/index.html){no-validation}
+
+---
+
+<include src="README.md" />

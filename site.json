@@ -13,12 +13,15 @@
   "pages": [
     {
       "src": "index.md",
-      "title": "Landing Page"
+      "title": "MarkBind - Reposense Integration Demo"
     },
     {
       "glob": ["**/index.md", "**/*.md"]
     }
   ],
+  "style": {
+    "codeTheme": "light"
+  },
   "pagesExclude": ["reposense-report/*"],
   "deploy": {
     "message": "Site Update."
