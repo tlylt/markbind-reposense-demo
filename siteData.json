@@ -14,36 +14,15 @@
       "headingKeywords": {}
     },
     {
-      "src": "contents/topic1.md",
-      "title": "",
-      "headings": {
-        "topic-1": "Topic 1"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "contents/topic2.md",
-      "title": "",
-      "headings": {},
-      "headingKeywords": {}
-    },
-    {
-      "src": "contents/topic3a.md",
-      "title": "",
-      "headings": {},
-      "headingKeywords": {}
-    },
-    {
-      "src": "contents/topic3b.md",
-      "title": "",
-      "headings": {},
-      "headingKeywords": {}
-    },
-    {
       "src": "index.md",
-      "title": "Landing Page",
+      "title": "MarkBind - Reposense Integration Demo",
       "headings": {
-        "reposense-report": "Reposense report"
+        "reposense-report": "Reposense report",
+        "markbind-reposense-demo": "markbind-reposense-demo",
+        "details": "Details",
+        "strategy-1-generate-locally-and-add-to-version-control": "Strategy 1: Generate locally and add to version control",
+        "strategy-2-generate-during-continuous-integration-and-deploy": "Strategy 2: Generate during continuous integration and deploy",
+        "troubleshooting": "Troubleshooting"
       },
       "headingKeywords": {}
     }
