@@ -10,6 +10,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v3
@@ -26,8 +28,9 @@ jobs:
     - name: Generate RepoSense
       run: bash ./run.sh
       shell: bash
-    - name: Build & Deploy MarkBind site
-      uses: MarkBind/markbind-action@v2
+    - uses: actions/setup-node@v2
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        version: '3.1.1'
+        node-version: '12'
+    - run: npm i -g markbind-cli
+    - run: markbind build
+    - run: markbind deploy --ci
