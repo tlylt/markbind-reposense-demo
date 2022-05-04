@@ -5,7 +5,11 @@
       "src": "README.md",
       "title": "",
       "headings": {
-        "markbind-reposense-demo": "markbind-reposense-demo"
+        "markbind-reposense-demo": "markbind-reposense-demo",
+        "details": "Details",
+        "strategy-1-generate-locally-and-add-to-version-control": "Strategy 1: Generate locally and add to version control",
+        "strategy-2-generate-during-continuous-integration-and-deploy": "Strategy 2: Generate during continuous integration and deploy",
+        "troubleshooting": "Troubleshooting"
       },
       "headingKeywords": {}
     },
