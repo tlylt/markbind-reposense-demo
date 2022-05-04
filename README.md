@@ -6,7 +6,7 @@ A demo site showing how to deploy your RepoSense report along with your MarkBind
 
 ## Details
 
-By default, MarkBind will copy all the files as assets of the generated site.
+**By default, MarkBind will copy all the files as assets of the generated site.**
 
 If the reposense report is in the same directory as the source files of a MarkBind site, you can just run `markbind build` to generate the site and have the report available at `/reposense-report/index.html`
 
@@ -18,6 +18,17 @@ To prevent MarkBind from doing any sorts of processing with the generated report
   "pagesExclude": ["reposense-report/*"],
 ```
 
+If you use the link to the reposense-report in your source files, you may receive a broken intralink warning if the report is not available yet (if you choose to generate it only in CI). To disable the warning you can either update the following in `site.json`:
+```json
+  "intrasiteLinkValidation": {
+    "enabled": false
+  }
+```
+
+Or, you can add `{no-convert}` to the link, like this:
+```md
+[Here](reposense-report/index.html){no-validation}
+```
 ### Strategy 1: Generate locally and add to version control
 
 1. Generate the report locally
