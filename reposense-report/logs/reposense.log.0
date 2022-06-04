@@ -1,26 +1,26 @@
-Jun 03, 2022 12:33:33 AM reposense.parser.CsvParser validateHeader
+Jun 04, 2022 12:39:06 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Branch,  File formats,  Ignore Glob List,  Ignore Authors List,  Ignore Commits List
-Jun 03, 2022 12:33:33 AM reposense.parser.CsvParser validateHeader
+Jun 04, 2022 12:39:06 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Author's Emails,  Repository's Location,  Author's GitHub ID,  Branch,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-Jun 03, 2022 12:33:33 AM reposense.report.RepoCloner spawnCloneProcess
+Jun 04, 2022 12:39:06 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/tlylt/markbind-reposense-demo.git...
-Jun 03, 2022 12:33:33 AM reposense.report.RepoCloner waitForCloneProcess
+Jun 04, 2022 12:39:06 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/tlylt/markbind-reposense-demo.git to complete...
-Jun 03, 2022 12:33:35 AM reposense.report.RepoCloner waitForCloneProcess
+Jun 04, 2022 12:39:08 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/tlylt/markbind-reposense-demo.git completed!
-Jun 03, 2022 12:33:35 AM reposense.report.ReportGenerator analyzeRepos
+Jun 04, 2022 12:39:08 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [1/1] Analyzing https://github.com/tlylt/markbind-reposense-demo.git (main)...
-Jun 03, 2022 12:33:35 AM reposense.report.ReportGenerator updateRepoConfig
+Jun 04, 2022 12:39:08 AM reposense.report.ReportGenerator updateRepoConfig
 INFO: https://github.com/tlylt/markbind-reposense-demo.git (main) does not contain a standalone config file.
-Jun 03, 2022 12:33:35 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Jun 04, 2022 12:39:08 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/tlylt/markbind-reposense-demo.git (main)...
-Jun 03, 2022 12:33:35 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Jun 04, 2022 12:39:08 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/tlylt/markbind-reposense-demo.git (main)...
-Jun 03, 2022 12:33:35 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Jun 04, 2022 12:39:08 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/tlylt/markbind-reposense-demo.git (main)...
-Jun 03, 2022 12:33:35 AM reposense.report.ReportGenerator analyzeRepo
+Jun 04, 2022 12:39:08 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/tlylt/markbind-reposense-demo.git (main) completed!
-Jun 03, 2022 12:33:35 AM reposense.report.ReportGenerator generateReposReport
+Jun 04, 2022 12:39:08 AM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/markbind-reposense-demo/markbind-reposense-demo/reposense-report
-Jun 03, 2022 12:33:35 AM reposense.RepoSense main
-INFO: Elapsed processing time: 2.36 second(s)
+Jun 04, 2022 12:39:08 AM reposense.RepoSense main
+INFO: Elapsed processing time: 2.71 second(s)
