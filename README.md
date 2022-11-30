@@ -85,9 +85,9 @@ jobs:
 The installation and generation of the RepoSense report.
 
 ```yaml
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
-        node-version: '12'
+        node-version: '14'
     - run: npm i -g markbind-cli
     - run: markbind build
     - run: markbind deploy --ci
