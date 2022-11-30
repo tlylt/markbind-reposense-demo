@@ -61,9 +61,9 @@
 </span><span>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Generate</span> <span class="hljs-string">RepoSense</span>
 </span><span>      <span class="hljs-attr">run:</span> <span class="hljs-string">bash</span> <span class="hljs-string">./run.sh</span>
 </span><span>      <span class="hljs-attr">shell:</span> <span class="hljs-string">bash</span>
-</span></code></pre><p>The installation and generation of the RepoSense report.</p> <pre><code class="hljs yaml"><span>    <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v2</span>
+</span></code></pre><p>The installation and generation of the RepoSense report.</p> <pre><code class="hljs yaml"><span>    <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span>
 </span><span>      <span class="hljs-attr">with:</span>
-</span><span>        <span class="hljs-attr">node-version:</span> <span class="hljs-string">'12'</span>
+</span><span>        <span class="hljs-attr">node-version:</span> <span class="hljs-string">'14'</span>
 </span><span>    <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">i</span> <span class="hljs-string">-g</span> <span class="hljs-string">markbind-cli</span>
 </span><span>    <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">markbind</span> <span class="hljs-string">build</span>
 </span><span>    <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">markbind</span> <span class="hljs-string">deploy</span> <span class="hljs-string">--ci</span>
