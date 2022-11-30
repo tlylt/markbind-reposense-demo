@@ -1,11 +1,11 @@
 name: CI
 
-on: 
+on:
   push:
     branches:
       - main
   schedule:
-    - cron:  '0 0 * * *'
+    - cron: '0 0 * * *'
 
 jobs:
   deploy:
@@ -13,24 +13,24 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v3
-      with:
-        python-version: "3.8"
-    - name: Install dependencies
-      run: pip install requests
-      shell: bash
-    - name: Install Java
-      uses: actions/setup-java@v3
-      with:
-        java-version: '11'
-        distribution: 'temurin'
-    - name: Generate RepoSense
-      run: bash ./run.sh
-      shell: bash
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '12'
-    - run: npm i -g markbind-cli
-    - run: markbind build
-    - run: markbind deploy --ci
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+      - name: Install dependencies
+        run: pip install requests
+        shell: bash
+      - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+      - name: Generate RepoSense
+        run: bash ./run.sh
+        shell: bash
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '12'
+      - run: npm i -g markbind-cli
+      - run: markbind build
+      - run: markbind deploy --ci
